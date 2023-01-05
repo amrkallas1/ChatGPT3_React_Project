@@ -1,0 +1,130 @@
+.navBar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding: 2rem 4rem;
+    font-family: var(--font-family);
+}
+.navBar .navBar_left{
+    display: flex;
+    flex: 1;
+    align-items: center;
+}
+.navBar_left .image img{
+    Width:62.56px;
+    height:16.02px;
+}
+.navBar_left .links{
+    display: flex;
+    flex: 1;
+    margin-left: 3rem;
+    color: white;
+}
+.navBar_left .links a{
+    margin-right: 2rem;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 25px;
+}
+.navBar .navBar_right{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.navBar_right .sign-in{
+    margin-right: 2rem;
+    padding: 4px 8px;
+    background: none;
+    color: white;
+    border: none;
+    font-size: 18px;
+}
+.navBar_right .sign-up{
+    background: #FF4820;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    border: none;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+}
+.navBar .toggle-menu{
+    margin-left: 1rem;
+    position: relative;
+    display: none;
+}
+.navBar .toggle-menu svg{
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 25px;
+    cursor: pointer;
+    color: white;
+}
+.navBar .toggle-menu .menu{
+    position: absolute;
+    color: white;
+    background: var(--color-blog);
+    top: 40px;
+    right: 0;
+    width: 220px;
+    border-radius: 5px;
+}
+
+.toggle-menu .menu .menu-links a{
+    padding: 1rem 2rem;
+    display: block;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--color-footer);
+    text-align: end;
+    /* width: 108%; */
+    font-size: 18px;
+}
+.toggle-menu .menu .menu-sign{
+    display: flex;
+    flex-direction: column;
+}
+.toggle-menu .menu .menu-sign .sign-in{
+    padding: 1rem 2rem;
+    background: none;
+    color: white;
+    border: none;
+    font-size: 18px;
+    text-align: end;
+    cursor: pointer;
+}
+.toggle-menu .menu .menu-sign .sign-up{
+    background: #FF4820;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    border: none;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    width: fit-content;
+    text-align: end;
+    margin-left: auto;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+}
+@media(max-width:1050px){
+    .navBar_left .links{
+        display: none;
+    }
+    .navBar .toggle-menu{
+        display: block;
+    }
+    .toggle-menu .menu .menu-sign{
+        display: none;
+    }
+}
+@media(max-width:500px){
+    .navBar .navBar_right{
+        display: none;
+    }
+    .toggle-menu .menu .menu-sign{
+        display: flex;
+    }
+}
